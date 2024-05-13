@@ -1,7 +1,7 @@
 import { BASE_URL_DEV } from './globalVariables.js';
 
 const registerService = async (userData) => {
-  const registerUrl = `${BASE_URL_DEV}/users/create`;
+  const registerUrl = `${BASE_URL_DEV}/auth/register`;
 
   try {
     const response = await fetch(registerUrl, {
@@ -11,6 +11,7 @@ const registerService = async (userData) => {
       },
       body: JSON.stringify(userData)
     });
+    console.log(response);
 
     const data = await response.json();
 
@@ -30,8 +31,8 @@ const registerService = async (userData) => {
 
 // Eksempel på brug:
 const userData = {
-  name: 'Flem',
-  password: '66655',
+  name: 'mohamed',
+  password: '31869446',
   email: 'vvvv@hhhh.com',
   phoneNumber: '55444422'
 };

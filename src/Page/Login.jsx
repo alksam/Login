@@ -6,12 +6,13 @@ import React, { useState } from 'react';
       const [username, setUsername] = useState('');
       const [password, setPassword] = useState('');
       const [loginError, setLoginError] = useState('');
+      const [loginSuccess, setLoginSuccess] = useState(false);
     
       const handleLogin = async (event) => {
         event.preventDefault(); // Forhindrer standardformularindsendelse
     
         try {
-          const response = await fetch(`${BASE_URL_DEV}/users/login`, {
+          const response = await fetch(`${BASE_URL_DEV}/auth/login`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

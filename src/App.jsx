@@ -38,10 +38,15 @@ function Post () {
 
 function App() {
 
+ // const [ isAuthenticated, setIsAuthenticated ] = useState(false);
+  //const [user , setUser] = useState({isLoading: false  ,error : null, user: {username:"", roles: []}});
+ //<Route element={
+   //   <ProtectedRoute isAuthenticated={isAuthenticated}><AppLayout setIsAuthenticated={isAuthenticated} roles={user.user.roles} /></ProtectedRoute>}></Route>
   return (
     <>
     <BrowserRouter>
     <Routes>
+     
 
       <Route element={<AppLayout/>}>
       <Route index element={<Navigate to="Home"/>} />
@@ -52,6 +57,7 @@ function App() {
       <Route index element={<h1>New Posts</h1> } />
       <Route path=":postId" element={<Post/> } />
     </Route>
+
     <Route path="Login" element={<Login/> } />
     <Route path="Register" element={<Register/> } />
 <Route path="*" element={<PagNotFound/> } />
