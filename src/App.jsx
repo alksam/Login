@@ -1,4 +1,4 @@
-import { BrowserRouter, NavLink } from "react-router-dom";
+import { BrowserRouter, NavLink, } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import { useParams,useNavigate ,Navigate} from 'react-router-dom';
@@ -7,11 +7,8 @@ import PagNotFound from "./Page/PagNotFound";
 import AppLayout from "./layout/AppLayout";
 import Login from "./Page/Login";
 import Register from "./Page/Register";
-
-
-
-
-
+import Products from "./Page/Products";
+import Calendar from "./Page/Calendar";
 
 function Posts () {
   return (
@@ -57,11 +54,18 @@ function App() {
       <Route index element={<h1>New Posts</h1> } />
       <Route path=":postId" element={<Post/> } />
     </Route>
+    <Route path="Products" element={<Products/> } >
+      <Route index element={<h1>New Products</h1> } />
+      <Route path=":productId" element={<h1>Product</h1> } />
+    </Route>
+      
 
     <Route path="Login" element={<Login/> } />
     <Route path="Register" element={<Register/> } />
 <Route path="*" element={<PagNotFound/> } />
     </Route>
+    <Route path="Calendar" element={<Calendar/> } />
+
     </Routes> 
     </BrowserRouter>
     
