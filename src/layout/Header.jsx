@@ -14,8 +14,8 @@ const styles = {
 function Header () {
     return(
       <>
-            <heading></heading>
-            <container></container>
+           
+            
      <MainNav/>
     </>
     )
