@@ -93,6 +93,8 @@ const GlobalStyles = createGlobalStyle`
   button:hover {
     background-color: var(--color-secondary);
   }
+  
+  
 `;
 
 export default GlobalStyles;
