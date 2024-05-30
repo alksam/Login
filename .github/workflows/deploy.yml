@@ -29,4 +29,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/front:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}ksammo/front:latest
+          
+
+
